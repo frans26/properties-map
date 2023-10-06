@@ -1,0 +1,97 @@
+.filter-wrapper {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.filter {
+  width: 250px;
+  height: 100vh;
+
+  border-left: 1px solid #e4e4e4;
+  background-color: #ffffff;
+}
+
+.arrow-container {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+.arrow-container:hover {
+  background-color: #add8ff;
+}
+
+.cross-container img,
+.arrow-container img {
+  width: 24px;
+}
+
+.cross-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.angle-right {
+  transform: rotate(180deg);
+}
+
+.filter-header {
+  padding: 16px;
+  border-bottom: 1px solid #e4e4e4;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-header-text {
+  margin: 0;
+}
+
+.filter-content {
+  padding: 16px;
+}
+
+.council-filter-item {
+  padding: 8px 12px;
+  border: 1px solid #e3e9ed;
+  border-radius: 5px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.icon-check-container {
+  margin-right: 8px;
+  width: 14px;
+  height: 20px;
+}
+
+.icon-check {
+  width: 14px;
+}
+
+.council-filter-item.active {
+  border: 1px solid #2bc48a;
+}
+
+.council-filter-item + .council-filter-item {
+  margin-top: 12px;
+}
+
+.council-text {
+  font-size: 12px;
+  margin: 0;
+}

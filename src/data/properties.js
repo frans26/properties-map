@@ -200,3 +200,15 @@ export const PROPERTIES = [
     postcode: "3912",
   },
 ];
+
+function getUniqueCouncils(properties) {
+  const uniqueCouncils = new Set();
+
+  for (const property of properties) {
+    uniqueCouncils.add(property.council);
+  }
+
+  return Array.from(uniqueCouncils);
+}
+
+export const COUNCILS = getUniqueCouncils(PROPERTIES);

@@ -5,18 +5,16 @@ import { useSelectProperty } from "../../context/useSelectProperty";
 
 import "./Map.css";
 
-import { PROPERTIES } from "../../data/properties";
-
 const mapboxAccessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
 const MapComponent = () => {
-  const { setSelectedProperty } = useSelectProperty();
+  const { setSelectedProperty, propertyList } = useSelectProperty();
 
   const mapRef = useRef();
   const [viewState, setViewState] = useState({
-    longitude: 145,
-    latitude: -38,
-    zoom: 9,
+    longitude: 146,
+    latitude: -37.2,
+    zoom: 7,
   });
 
   const handleMarkerClick = (property) => {
@@ -30,7 +28,7 @@ const MapComponent = () => {
 
   const pins = useMemo(
     () =>
-      PROPERTIES.map((prop) => (
+      propertyList.map((prop) => (
         <Marker
           longitude={prop.longitude}
           latitude={prop.latitude}
@@ -42,7 +40,7 @@ const MapComponent = () => {
           }}
         ></Marker>
       )),
-    []
+    [propertyList]
   );
 
   return (
