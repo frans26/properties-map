@@ -1,14 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useSelectProperty } from "../../context/useSelectProperty";
 
 import IconAngleLeft from "../../assets/icons/angle-small-left.svg";
+import IconCross from "../../assets/icons/cross-small.svg";
 
 import "./Sidebar.css";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const { selectedProperty } = useSelectProperty();
+
+  useEffect(() => {
+    if (selectedProperty) {
+      setShowSidebar(true);
+    }
+  }, [selectedProperty]);
 
   return (
     <div className="sidebar-wrapper">
@@ -27,6 +34,13 @@ const Sidebar = () => {
         <div className="sidebar">
           <div className="sidebar-header">
             <h3 className="sidebar-header-text">Details</h3>
+
+            <div
+              className="cross-container"
+              onClick={() => setShowSidebar(!showSidebar)}
+            >
+              <img src={IconCross} alt="cross-small" />
+            </div>
           </div>
 
           {selectedProperty && (

@@ -9,7 +9,7 @@
 }
 
 .sidebar {
-  width: 320px;
+  width: 250px;
   height: 100vh;
 
   border-left: 1px solid #e4e4e4;
@@ -29,8 +29,15 @@
   background-color: #add8ff;
 }
 
+.cross-container img,
 .arrow-container img {
   width: 24px;
+}
+
+.cross-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .angle-right {
@@ -40,6 +47,10 @@
 .sidebar-header {
   padding: 16px;
   border-bottom: 1px solid #e4e4e4;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sidebar-header-text {

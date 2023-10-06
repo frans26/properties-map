@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Map from "./components/Map/Map";
 
 import "./App.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function App() {
   return (
