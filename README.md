@@ -1,8 +1,10 @@
-# React + Vite
+# Properties map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front-end Coding Challenge
 
-Currently, two official plugins are available:
+### Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Display properties as markers on a map using reactjs.
+2. Used Mapbox for the map integration.
+3. Clicking on a marker will display info on a right sidebar.
+4. Filter by council on the left sidebar.
